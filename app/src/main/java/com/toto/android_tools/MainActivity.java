@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnSwipeRefresh, btnRTPSlot;
+    Button btnSwipeRefresh, btnRTPSlot, btnTable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnSwipeRefresh = findViewById(R.id.btnSwipeRefresh);
         btnRTPSlot = findViewById(R.id.btnRTPSlot);
+        btnTable = findViewById(R.id.btnTable);
 
         btnSwipeRefresh.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), activity_rtpslot.class);
+                startActivity(intent);
+            }
+        });
+        btnTable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), activity_table.class);
                 startActivity(intent);
             }
         });
